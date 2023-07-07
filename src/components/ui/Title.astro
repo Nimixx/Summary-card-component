@@ -1,0 +1,35 @@
+---
+import type { HTMLAttributes } from "astro/types";
+import { cva, type VariantProps } from "class-variance-authority";
+
+const title = cva("", {
+  variants: {
+    intent: {
+      primary: [
+        "heading--primary",
+      ],
+      secondary: [
+        "heading--secondary",
+      ],
+      tertiary: [
+        "heading--tertiary",
+      ],
+    },
+    size: {
+      small: ["heading--small"],
+      medium: ["heading--medium"],
+      large: ["heading--large"],
+    },
+  },
+});
+
+export interface Props
+  extends HTMLAttributes<"h2">,
+    VariantProps<typeof title> {}
+
+const { intent = "primary", size = "small" } = Astro.props;
+---
+
+<h2 class={title({ intent, size })}>
+  <slot />
+</h2>

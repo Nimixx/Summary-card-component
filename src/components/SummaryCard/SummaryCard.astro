@@ -1,0 +1,78 @@
+---
+import Title from "../ui/Title.astro";
+import ScoreCard from "../ui/ScoreCard.astro";
+---
+
+<section class="card__container">
+  <Title intent="secondary">Summary</Title>
+  <div class="card__wrapper">
+    <ScoreCard
+      iconName="iconoir:flash"
+      header="red"
+      title="Reaction"
+      score={80}
+      totalScore={100}
+    />
+    <ScoreCard
+      iconName="la:brain"
+      intent="yellow"
+      header="yellow"
+      title="Memory"
+      score={92}
+      totalScore={100}
+    />
+    <ScoreCard
+      iconName="fluent:chat-16-regular"
+      intent="green"
+      header="green"
+      title="Verbal"
+      score={61}
+      totalScore={100}
+    />
+    <ScoreCard
+      iconName="mdi:eye-outline"
+      intent="blue"
+      header="blue"
+      title="Visual"
+      score={61}
+      totalScore={100}
+    />
+  </div>
+  <button class="next--btn">Continue</button>
+</section>
+
+<style lang="scss">
+  @use "../../style/abstracts/variables.scss" as *;
+  @use "../../style/abstracts/mixins.scss" as *;
+
+  .card__container {
+    @include flexCenterColumn;
+    justify-content: space-between;
+    align-items: start;
+    width: 35rem;
+    gap: 2rem;
+    background-color: $color-white;
+    padding: 2rem 0rem;
+    @media screen and (min-width: 768px) {
+      height: 50rem;
+      padding: 4rem;
+    }
+  }
+
+  .card__wrapper {
+    width: 100%;
+    @include flexCenterColumn;
+    gap: 1.7rem;
+  }
+
+  .next--btn {
+    width: 100%;
+    height: 5.5rem;
+    border-radius: 5rem;
+    background-color: $color-persian-blue;
+    color: $color-white;
+    border: none;
+    font-size: 1.6rem;
+    font-weight: 600;
+  }
+</style>

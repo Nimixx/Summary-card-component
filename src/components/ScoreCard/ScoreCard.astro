@@ -1,0 +1,32 @@
+---
+import Title from '../../components/ui/Title.astro'
+import ScoreCounter from './ScoreCounter.astro';
+---
+
+<section class="card__container">
+  <Title intent="tertiary">Your Result</Title>
+  <ScoreCounter />
+  <Title size="large">Great</Title>
+  <p class="paragraph--primary">You scored higher than 65% of the people who have taken these tests.</p>
+</section>
+
+<style lang="scss">
+@use "../../style/abstracts/variables.scss" as *;
+@use "../../style/abstracts/mixins.scss" as *;
+
+.card__container {
+  @include flexCenterColumn;
+  justify-content: space-between;
+  width: 100%;
+  gap: 2rem;
+  background-color: $color-royal-blue;
+  border-bottom-left-radius: 3rem;
+  border-bottom-right-radius: 3rem;
+  padding: 4rem 3rem;
+  @media screen and (min-width: 768px) {
+    width: 35rem;
+    height: 50rem;
+    border-radius: 3rem;
+  }
+}
+</style>

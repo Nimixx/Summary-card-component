@@ -1,0 +1,30 @@
+---
+import ScoreCard from "./ScoreCard/ScoreCard.astro";
+import SummaryCard from "./SummaryCard/SummaryCard.astro";
+---
+
+<div class="card__container">
+  <ScoreCard />
+  <SummaryCard />
+</div>
+
+<style lang="scss">
+@use "../style/abstracts/variables.scss" as *;
+@use "../style/abstracts/mixins.scss" as *;
+
+.card__container {
+  @include flexCenter;
+  flex-direction: column;
+  width: 100vw;
+  background-color: $color-white;
+  border-radius: 3rem;
+  box-shadow: 5rem 0.5rem 15rem 0rem $color-pale-blue;
+  overflow: visible;
+  @media screen and (min-width: 768px) {
+    width: 70rem;
+    height: 50rem;
+    overflow: hidden;
+    flex-direction: row;
+  }
+}
+</style>

@@ -1,0 +1,38 @@
+---
+---
+
+<section class="score__counter">
+  <h2 class="customer--score">76</h2>
+  <p class="total--score">of 100</p>
+</section>
+
+<style lang="scss">
+  @use "../../style/abstracts/variables.scss" as *;
+  @use "../../style/abstracts/mixins.scss" as *;
+
+  .score__counter {
+    @include flexCenterColumn;
+    width: 18rem;
+    height: 18rem;
+    border-radius: 50%;
+    background-image: linear-gradient(
+      to bottom,
+      $color-violet-blue,
+      $color-royal-blue
+    );
+    box-shadow: inset 0 3rem 2rem 1rem $color-cobalt-blue-shadow;
+  }
+
+  .customer--score {
+    color: $color-white;
+    font-size: 7rem;
+    font-family: inherit;
+  }
+
+  .total--score {
+    color: $color-light-lavender-dark;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-top: -1.5rem;
+  }
+</style>

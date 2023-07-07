@@ -1,0 +1,51 @@
+@use '../abstracts/variables.scss' as *;
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;900&display=swap');
+
+
+html {
+  font-size: 62.5%;
+  font-family: 'Hanken Grotesk', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.heading--primary {
+  color: $color-pale-blue;
+}
+
+.heading--secondary {
+  color: $color-dark-gray-blue;
+}
+
+.heading--tertiary {
+  color: $color-light-lavender;
+}
+
+.heading--small {
+  font-size: $heading-size-small;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+}
+
+.heading--medium {
+  font-size: $heading-size-medium;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+}
+
+.heading--large {
+  font-size: $heading-size-large;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+}
+
+.paragraph--primary {
+  font-size: $paragraph-size;
+  color: $color-light-lavender;
+  line-height: 1.5;
+  text-align: center;
+  max-width: 30rem;
+  @media screen and (min-width: 768px) {
+    max-width: 25rem;
+  }
+}

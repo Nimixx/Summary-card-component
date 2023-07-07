@@ -1,0 +1,13 @@
+@use "../abstracts/variables.scss" as *;
+@use "../abstracts/mixins.scss" as *;
+
+body {
+  @include flexCenterColumn;
+  justify-content: flex-start;
+  background-color: $color-white;
+  max-width: 100%;
+  min-height: 100vh;
+  @media screen and (min-width: 768px) {
+    justify-content: center;
+  }
+}

@@ -1,0 +1,118 @@
+---
+import type { HTMLAttributes } from "astro/types";
+import { cva, type VariantProps } from "class-variance-authority";
+import { Icon } from "astro-icon";
+
+const card = cva("summary__card", {
+  variants: {
+    intent: {
+      red: ["summary__card--red"],
+      yellow: ["summary__card--yellow"],
+      green: ["summary__card--green"],
+      blue: ["summary__card--blue"],
+    },
+    header: {
+      red: ["card__header--red", "card__header"],
+      yellow: ["card__header--yellow", "card__header"],
+      green: ["card__header--green", "card__header"],
+      blue: ["card__header--blue", "card__header"],
+    },
+  },
+});
+
+export interface Props
+  extends HTMLAttributes<"div">,
+    VariantProps<typeof card> {
+  iconName: string;
+  score: number;
+  totalScore: number;
+}
+
+const {
+  intent = "red",
+  iconName,
+  title,
+  score,
+  totalScore,
+  header,
+} = Astro.props;
+---
+
+<article class={card({ intent })}>
+  <header class={card({ header })}>
+    <Icon class="card--icon" name={iconName} />
+    <h3>{title}</h3>
+  </header>
+  <footer class="card__footer">
+    <p>{score}</p>
+    <span>/</span>
+    <p>{totalScore}</p>
+  </footer>
+</article>
+
+<style lang="scss">
+  @use "../../style/abstracts/variables" as *;
+  @use "../../style/abstracts/mixins" as *;
+
+  .summary__card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 1rem;
+    width: 100%;
+    height: 5rem;
+    font-weight: 700;
+    text-align: center;
+    &--red {
+      background-color: #ffa7a728;
+    }
+    &--yellow {
+      background-color: #f7d97628;
+    }
+    &--green {
+      background-color: #84df5028;
+    }
+    &--blue {
+      background-color: #7792fd28;
+    }
+  }
+
+
+  .card__header {
+    @include flexCenter;
+    justify-content: start;
+    font-size: 1.4rem;
+    &--red {
+      color: #f37171;
+    }
+    &--yellow {
+      color: #ffca1e;
+    }
+    &--green {
+      color: #52c212;
+    }
+    &--blue {
+      color: #5c7cfa;
+    }
+  }
+
+  .card--icon {
+    width: 2.5rem;
+    margin-right: 0.5rem;
+  }
+
+
+  .card__footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #949494;
+    font-size: 1.8rem;
+    gap: 0.5rem;
+    & p:first-child {
+      color: #3b3b3b;
+    }
+  }
+
+</style>
