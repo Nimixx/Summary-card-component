@@ -38,4 +38,3 @@ Users should be able to:
 
 - Website - [Nimixx](https://www.your-site.com)
 - Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- LinkedIn - [@yourusername](https://www.twitter.com/yourusername)
