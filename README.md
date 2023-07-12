@@ -22,7 +22,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Check the component live [Live page](https://nimixx.github.io/Summary-card-component/)
 
 ### Built with
 
