@@ -36,5 +36,5 @@ Users should be able to:
 
 ## Author
 
-- Website - [Nimixx](https://www.your-site.com)
+- Website - [Soon...](https://www.example.com/)
 - Frontend Mentor - [@Nimixx](https://www.frontendmentor.io/profile/Nimixx)
