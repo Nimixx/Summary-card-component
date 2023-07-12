@@ -3,12 +3,12 @@ import Title from '../../components/ui/Title.astro'
 import ScoreCounter from './ScoreCounter.astro';
 ---
 
-<section class="card__container">
+<article class="card__container">
   <Title intent="tertiary">Your Result</Title>
   <ScoreCounter />
   <Title size="large">Great</Title>
   <p class="paragraph--primary">You scored higher than 65% of the people who have taken these tests.</p>
-</section>
+</article>
 
 <style lang="scss">
 @use "../../style/abstracts/variables.scss" as *;

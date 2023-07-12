@@ -74,5 +74,16 @@ import ScoreCard from "../ui/ScoreCard.astro";
     border: none;
     font-size: 1.6rem;
     font-weight: 600;
+    transition: all 0.3s ease-in-out;
+    outline: transparent solid 0.5rem;
+    &:hover {
+      outline: $color-light-lavender-dark solid 0.5rem;
+      background-color: $color-violet-blue;
+      cursor: pointer;
+    }
+    &:focus {
+      outline: $color-light-lavender-dark solid 0.5rem;
+      background-color: $color-violet-blue;
+    }
   }
 </style>
