@@ -37,4 +37,4 @@ Users should be able to:
 ## Author
 
 - Website - [Nimixx](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
+- Frontend Mentor - [@Nimixx](https://www.frontendmentor.io/profile/Nimixx)
