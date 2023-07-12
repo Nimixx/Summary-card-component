@@ -18,7 +18,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![]([Screenshot of the component](https://raw.githubusercontent.com/Nimixx/Summary-card-component/main/public/screenshot.png)
 
 ### Links
 
