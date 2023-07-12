@@ -22,7 +22,7 @@ Users should be able to:
 
 ### Links
 
-- [Live page](https://nimixx.github.io/Summary-card-component/)
+- Check the component live [Live page](https://nimixx.github.io/Summary-card-component/)
 
 ### Built with
 
